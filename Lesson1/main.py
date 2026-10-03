@@ -56,4 +56,45 @@ print('Cột 1 \tCột 2 \tCột 3')
         # Dạng đa nhánh:    if ... elif ... else ...
 
 # Vòng lặp for - Vòng lặp hữu hạn
-    # range(start, stop, step)
+    # range (start, stop, step)
+    # range (start, stop)
+    # range (stop)
+
+# Vòng lặp while - Vòng lặp vô hạn
+    # while <điều kiện>: lặp đến khi điều kiện sai
+
+# Các câu lệnh điều khiển loop
+    # break: thoát khỏi vòng lặp, bỏ qua các lần lặp còn lại
+    # continue: bỏ qua lần lặp hiện tại, tiếp tục vòng lặp
+
+# Danh sách: array/list
+    # Create: [] [1, 2, 3, 4]
+    # Read:
+        # len(): Độ dài / số lượng phần tử
+        # truy cập phần tử bằng index: arr [0], arr[-1]
+        # 3 cách duyệt danh sách:
+    # Update:
+        # append(value): thêm phần tử vào cuối danh sách
+        # insert(index, value): thêm phần tử vào vị trí chỉ định
+        # arr[i] = new_value
+    # Delete:
+        # remove(value): xoá bằng value
+        # pop(index): xóa bằng index
+        # clear(): xóa tất cả
+    # Sắp xếp: 
+        # sort(): thứ tự tăng dần
+        # sort(reverse=True): thứ tự giảm dần
+    # Khác: min(), max()
+
+# String:
+    # len(): độ dài chuỗi
+    # sub string: xâu con
+    # strip(): xóa khoảng trắng ở đầu và cuối str
+    # split(): tách chuỗi
+    # join(): gộp chuỗi
+    # replace(): thay thế
+    # chuẩn hóa: upper(), lower(), title()
+
+# Hàm / chương trình con
+    # Tham số đầu vào: parameters
+    # Giá trị trả về: return
