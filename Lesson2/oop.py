@@ -59,3 +59,39 @@ class Rectangle:
         print(f"Area: {self.area}")
         print(f"Perimeter: {self.perimeter}")
         print('===========================')
+
+# Bài 3: BankAccount
+class BankAccount:
+    def __init__(self, account_number, owner, balance):
+        self.account_number = account_number
+        self.owner = owner
+        self.balance = balance
+
+    def display_balance(self):
+        print('\n===== BANK ACCOUNT INFO =====')
+        print(f"Account Number: {self.account_number}")
+        print(f"Owner: {self.owner}")
+        print(f"Balance: ${self.balance}")
+        print('==============================')
+
+    def deposit(self, amount:float):
+        if amount <= 0:
+            print("Số tiền nạp không hợp lệ!")
+            return
+        else:
+            # Cộng tiền vào tài khoản
+            self.balance += amount
+            print(f"Đã nạp ${amount} vào tài khoản.")
+        # Hiển thị lại só dư
+        self.display_balance()
+
+    def withdraw(self, amount:float):
+        if amount <= 0 or amount > self.balance:
+            print("Số tiền rút không hợp lệ!")
+            return
+        else:
+            # Trừ tiền từ tài khoản
+            self.balance -= amount
+            print(f"Đã rút ${amount} từ tài khoản.")
+        # Hiển thị lại só dư
+        self.display_balance()

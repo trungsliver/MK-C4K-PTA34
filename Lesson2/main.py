@@ -23,3 +23,13 @@ rectangle_1.display_info_2()
             # withdraw(amount): rút tiền từ tài khoản
             # display_balance(): hiển thị số dư tài khoản
             # (amount: số tiền nạp/rút theo đơn vị $)
+account_1 = oop.BankAccount("9999", "Duc Trung", 1000)
+
+account_1.display_balance()
+
+account_1.deposit(500)
+account_1.deposit(-100)  # Test nạp tiền không hợp lệ
+
+account_1.withdraw(200)
+account_1.withdraw(-50)
+account_1.withdraw(99999999)
