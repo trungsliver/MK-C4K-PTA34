@@ -93,3 +93,35 @@ class BankAccount:
             print(f"Đã rút ${amount} từ tài khoản.")
         # Hiển thị lại só dư
         self.display_balance()
+
+    def menu(self):
+        while True:
+            print("\n===== BANK ACCOUNT MENU =====")
+            print("1. Display Balance")
+            print("2. Deposit")
+            print("3. Withdraw")
+            print("4. Exit")
+            print("==============================")
+            action = input("Enter your choice (1-4): ")
+
+            # Loại bỏ khoảng trắng đầu và cuối
+            action = action.strip()  
+
+            if action == '1':
+                self.display_balance()
+            elif action == '2':
+                try:
+                    amount = float(input("Enter amount to deposit: "))
+                    self.deposit(amount)
+                except:
+                    print("Số tiền nhập không hợp lệ!")
+            elif action == '3':
+                try:
+                    amount = float(input("Enter amount to withdraw: "))
+                    self.withdraw(amount)
+                except:
+                    print("Số tiền nhập không hợp lệ!")
+            elif action == '4':
+                break
+            else:
+                print("Lựa chọn không hợp lệ. Vui lòng chọn lại.")

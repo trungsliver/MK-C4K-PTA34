@@ -33,3 +33,5 @@ account_1.deposit(-100)  # Test nạp tiền không hợp lệ
 account_1.withdraw(200)
 account_1.withdraw(-50)
 account_1.withdraw(99999999)
+
+account_1.menu()
