@@ -77,7 +77,6 @@ class BankAccount:
     def deposit(self, amount:float):
         if amount <= 0:
             print("Số tiền nạp không hợp lệ!")
-            return
         else:
             # Cộng tiền vào tài khoản
             self.balance += amount
@@ -88,7 +87,6 @@ class BankAccount:
     def withdraw(self, amount:float):
         if amount <= 0 or amount > self.balance:
             print("Số tiền rút không hợp lệ!")
-            return
         else:
             # Trừ tiền từ tài khoản
             self.balance -= amount
