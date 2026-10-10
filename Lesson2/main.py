@@ -10,6 +10,9 @@ animal_2.eat("cheese")
 # Bài 2: Tạo lớp Rectangle với các thuộc tính: length, width.  
 # Tạo phương thức tính diện tích và chu vi của hình chữ nhật. 
 # Test ở file main.py: tạo đối tượng, tính chu vi, diện tích.
+rectangle_1 = oop.Rectangle(5, 3)
+rectangle_1.display_info()
+rectangle_1.display_info_2()
 
 # Bài 3: Tạo lớp BankAccount với các thuộc tính: 
             # account_number: số tài khoản 

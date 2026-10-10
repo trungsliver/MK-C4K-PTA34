@@ -28,3 +28,34 @@ animal_1 = Animal("Loopy", 'Beaver', 5, 'Pink')
 print(animal_1)  
 animal_1.display_info()
 animal_1.eat("fish")
+
+# Bài 2: Rectangle
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+        # Khai báo thêm thuộc tính (không cần truyền tham số)
+        self.area = self.length * self.width
+        self.perimeter = 2 * (self.length + self.width)
+
+    def calculate_area(self):
+        return self.length * self.width
+
+    def calculate_perimeter(self):
+        return 2 * (self.length + self.width)
+
+    def display_info(self):
+        print('===== RECTANGLE INFO =====')
+        print(f"Length: {self.length}")
+        print(f"Width: {self.width}")
+        print(f"Area: {self.calculate_area()}")
+        print(f"Perimeter: {self.calculate_perimeter()}")
+        print('===========================')
+
+    def display_info_2(self):
+        print('===== RECTANGLE INFO =====')
+        print(f"Length: {self.length}")
+        print(f"Width: {self.width}")
+        print(f"Area: {self.area}")
+        print(f"Perimeter: {self.perimeter}")
+        print('===========================')
