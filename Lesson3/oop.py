@@ -48,3 +48,18 @@ class Student(Human):
             print('Thay đổi school thành công!')
             # Hiển thị lại thông tin sau chỉnh sửa
             self.display_info()
+
+    # Phương thức sửa tuổi
+    def change_age(self):
+        try:
+            new_age = int(input("Nhập tuổi mới: "))
+            if new_age < 0:
+                print("Tuổi không hợp lệ!")
+            else:
+                # Cập nhật thông tin tuổi
+                self.age = new_age
+                print('Thay đổi tuổi thành công!')
+                # Hiển thị lại thông tin sau chỉnh sửa
+                self.display_info()
+        except:
+            print("Tuổi phải là một số nguyên!")
