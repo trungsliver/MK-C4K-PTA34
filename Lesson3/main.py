@@ -28,3 +28,11 @@ stu1.change_age()
 # Yêu cầu:
 # - Tạo class ở file oop.py
 # - Viết chương trình test tại file main.py
+animal_1 = oop.Animal("Tom", "Cat")
+animal_2 = oop.Animal("Jerry", "Mouse")
+animal_1.display_info()
+animal_2.eat("Cheese")
+
+dog1 = oop.Dog("Labador", "Dog", "Husky")
+dog1.display_info()
+dog1.bark()

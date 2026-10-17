@@ -63,3 +63,45 @@ class Student(Human):
                 self.display_info()
         except:
             print("Tuổi phải là một số nguyên!")
+
+
+# Luyện tập
+class Animal:
+    def __init__(self, name, species):
+        self.name = name
+        # species: loài (chó, mèo, chim, ...)
+        self.species = species
+
+    def display_info(self):
+        print("\n===== ANIMAL INFO =====")
+        print(f"Name: {self.name}")
+        print(f"Species: {self.species}")
+        print("=======================\n")
+
+    def eat(self, food):
+        print(f"{self.name} is eating {food}")
+
+class Dog(Animal):
+    def __init__(self, name, species, breed):
+        super().__init__(name, species)
+        # breed: giống (Poodle, Husky, ...)
+        self.breed = breed
+
+    # Kế thừa (có sửa đổi)
+    def display_info(self):
+        print("\n===== DOG INFO =====")
+        print(f"Name: {self.name}")
+        print(f"Species: {self.species}")
+        print(f"Breed: {self.breed}")
+        print("=======================\n")
+
+    def bark(self):
+        print(f"{self.name} is barking: Woof Woof!")
+
+    def change_name(self, new_name):
+        if new_name.strip() == "":
+            print("Tên không hợp lệ!")
+        else:
+            self.name = new_name
+            print('Thay đổi tên thành công!')
+            self.display_info()
