@@ -65,7 +65,7 @@ def switch_window(classw):
     window = classw
     window.show()
 
-# Hàm check email
+# Hàm check email (dùng regex = regular expression)
 def check_email(email):
     import re
     pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
@@ -74,7 +74,17 @@ def check_email(email):
         return True
     else:
         return False
-    
+
+# Hàm check password (dùng regex = regular expression)
+def check_password(password):
+    import re
+    pattern = r'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$'
+
+    if re.match(pattern, password):
+        return True
+    else:
+        return False
+
 # Run app
 window = Signup()
 window.show()
