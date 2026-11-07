@@ -8,11 +8,22 @@ from PyQt6 import uic
 app = QApplication(sys.argv)
 
 # Mỗi trang gia diện là 1 class riêng biệt
-class MainWindow(QMainWindow):
+class Signup(QMainWindow):
     def __init__(self):
         super().__init__()
         # Lấy file giao diện đã tạo (cùng folder)
         uic.loadUi('signup.ui', self)
+        # Kết nối nút bấm với hàm xử lý
+        self.pushButton_signup.clicked.connect(self.test_button)
+
+    def test_button(self):
+        msg_box('Thông báo', 'Bạn vừa ấn nút!')
+
+class Login(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        # Lấy file giao diện đã tạo (cùng folder)
+        uic.loadUi('login.ui', self)
         
 # Hàm hiển thị thông báo
 def msg_box(title, content):
@@ -34,7 +45,7 @@ def switch_window(classw):
     window.show()
 
 # Run app
-window = MainWindow()
+window = Signup()
 window.show()
 sys.exit(app.exec())
 

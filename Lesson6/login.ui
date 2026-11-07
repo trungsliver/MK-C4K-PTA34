@@ -111,7 +111,7 @@ QPushButton {
 
 /* Trạng thái di chuột vào */
 QPushButton:hover {
-	background-color: rgb(211, 105, 43);
+	background-color: rgb(149, 0, 0);
 }
 
 /* Trạng thái ấn chuột vào */
