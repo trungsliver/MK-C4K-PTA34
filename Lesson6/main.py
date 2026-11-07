@@ -38,13 +38,60 @@ class Signup(QMainWindow):
         elif len(username) < 3:
             msg_box('Signup failed', 'Username must be at least 3 characters!')
             check = False
-        
+        elif check_email(email) == False:
+            msg_box('Signup failed', 'Email is not valid!')
+            check = False
+        elif check_password(password) == False:
+            msg_box('Signup failed', 'Password is not valid!')
+            check = False
+        elif password != confirm:
+            msg_box('Signup failed', 'Password and confirm password do not match!')
+            check = False
+        else:
+            # Kiểm tra email đã tồn tại chưa
+            for user in users:
+                # Tách email và password và lưu vào biến
+                stored_email, stored_password = user.split(':', 1)
+                if email == stored_email:
+                    msg_box('Signup failed', 'Email already exists!')
+                    check = False
+                    break
+        # Kiểm tra đăng ký
+        if check == True:
+            # Thêm tài khoản mới vào danh sách users
+            new_user = f"{email}:{password}"
+            users.append(new_user)
+            print(users) # để test
+            msg_box('Signup success', 'You have successfully signed up!')
+            # Chuyển sang giao diện đăng nhập
+            switch_window(Login())
 
 class Login(QMainWindow):
     def __init__(self):
         super().__init__()
         # Lấy file giao diện đã tạo (cùng folder)
         uic.loadUi('login.ui', self)
+        # Kết nối nút bấm với hàm xử lý
+        self.pushButton_login.clicked.connect(self.check_login)
+
+    def check_login(self):
+        # Lấy thông tin từ giao diện
+        email = self.lineEdit_email.text().strip()
+        password = self.lineEdit_password.text().strip()
+        # Biến kiểm tra đăng nhập
+        check = False
+        # Kiểm tra đăng nhập
+        for user in users:
+            stored_email, stored_password = user.split(':')
+            if email == stored_email and password == stored_password:
+                check = True
+                break
+        # Kiểm tra đăng nhập
+        if check == True:
+            msg_box('Login success', 'Welcome to my app !!!')
+            switch_window(Signup())
+        else:
+            msg_box('Login fail', 'Email or password is incorrect!')
         
 # Hàm hiển thị thông báo
 def msg_box(title, content):
