@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Vertical Layout</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>121</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout"/>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>60</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Trạng thái bình thường */
+QPushButton {
+	/* Màu nền */
+	background-color: rgb(156, 7, 7);
+	/* Màu chữ */
+	color: white;
+	/* font chữ */
+	font: 75 12pt &quot;Arial&quot;;
+	/* Viền: kích thước - loại - màu */
+	border: 2px solid #6e6e6e;
+	/* làm cong viền */
+	border-radius: 10px;
+}
+
+/* Trạng thái khi di chuột vào */
+QPushButton:hover{
+	background-color: #fadede;
+	color: black;
+}
+
+/* Trạng thái khi ấn chuột */
+QPushButton:pressed{
+	/* tăng khoảng cách đến viền */
+	padding-left: 3px;
+	padding-top: 3px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Giới thiệu</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
